@@ -3,34 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Year Resolution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Vast+Shadow&display=swap"
+      rel="stylesheet"
+    />
+    <title>New Year Resolutions</title>
+    <style>
+       body {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/154/671/original/starfall-gif-50.gif?1736709052");
+        font-family: "Lato", serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-top: 100px;
+      }
+      .box{
+        background: rgba(0, 0, 0, 0.9);
+        border: 1px solid black;
+        border-radius: 60px;
+        color: #ffffff;
+        display: block;
+        font-size: 18px;
+        margin: 0 auto;
+        padding: 40px;
+        text-align: center;
+        max-width: 1000px;
+      }
+      h1 {
+        font-family: "Vast Shadow", serif;
+        font-weight: 400;
+        font-size: 45px;
+        font-style: normal;
+      }
+      button {
+        border: none;
+        border-radius: 30px;
+        box-shadow: 5px 3px 3px grey;
+        color: grey;
+        font-size: 16px;
+        padding: 10px;
+      }
+      button:hover {
+        background: grey;
+        box-shadow: 5px 3px 3px #ffffff;
+        color: #ffffff;
+        cursor: pointer;
+      }
+      a {
+        color: grey;
+      }
+      footer {
+        margin-top: 35px;
+      }
+    </style>
   </head>
   <body>
-    <h1>NEW YEAR RESOLUTION (with a different bold font)</h1>
-    <br />
-    <p>
-      This year, i plan to commit myself in all things that bring out the best
-      in me and things that help me improve my goals in a better, sustainable
-      way so i can succeed like i was always meant to
-    </p>
-    <br />
-    <ul>
-      <li>resolution 1 - get a job i enjoy</li>
-      <li>resolution 2 - coding a new project each week</li>
-      <li>resolution 3 - take my sister out more on fun sister dates</li>
-      <li>resolution 4 - buy my mom some property (land)</li>
-      <li>
-        resolution 5 - make enough money so i can give my family everything they
-        deserve
-      </li>
-    </ul>
-    <br />
-    <p>image1 for resolution1 i mage2 for resolution2 image3 for resolution3</p>
-    <br />
-    <p>
-      //maybe the resolution could slide in (css)? //moving image for
-      background? or maybe the resolution could explode like a firework //maybe
-      a few images of what id like to do, each resolution has an image maybe
-    </p>
+    <div class = "box">
+    <h1>✨NEW YEAR'S RESOLUTIONS✨</h1>
+    <p id = "switch"> <img src = "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/154/842/original/5c80bbe7fe17d474c5b21c264a40d8a0.jpg?1736878607" width = 700px alt = "luxury lifestyle"/></p>
+     <button><strong>CLICK ME🚨</strong></button>
+     <footer>This project was coded with love by <a href ="https://github.com/Vengefulcookie" target = "_blank">Snethemba Shangase🖤</a> and hosted on <a href = "https://github.com/Vengefulcookie/new-year-resolutions" target ="_blank">Github</a>.</footer>
+  </div>
+  <script>
+      let switchParagraph = document.querySelector("#switch");
+      let resolution = ["This year, I plan to commit myself in all things that bring out the best in me and things that will help me improve my goals in a better, sustainable way so I can succeed like I was always meant to🙂.","Resolution 1: Get a job that I enjoy, that way, everyday will be its own fun adventure.👩‍💻", "Resolution 2: Code a new project each week so I am able to grow my future career to the best of my ability.💻", "Resolution 3: Take my sister out more on fun sister dates so we can go on all sorts of cool trips while bonding as sisters do.👯‍♀️", "Resolution 4: Buy my mom her dream car that she has wished for.🚐", "Resolution 5: Make enough money so I can give my family everything they deserve.❤️"];
+      let count = 0;
+      function changeResolution(){
+      if (count < resolution.length) {
+        switchParagraph.innerHTML = resolution[count] 
+      count++;
+      } else {
+        count = 0;
+      }
+    }
+    let button = document.querySelector("button");
+    button.addEventListener("click",changeResolution);
+  </script>
   </body>
 </html>
